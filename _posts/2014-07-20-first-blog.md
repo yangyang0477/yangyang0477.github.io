@@ -12,7 +12,7 @@ tags:
 > 爱众人，信少数人，不害人！
 
 ```
-printf "hello word"
+print "hello word"
 ```
 
 
