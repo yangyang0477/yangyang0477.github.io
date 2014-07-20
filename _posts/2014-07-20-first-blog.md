@@ -12,12 +12,12 @@ tags:
 > 爱众人，信少数人，不害人！
 
 
-{% highlight ruby linenos %}
+```python
 
 print "hello world"
-print "hahaha"
 
-{% endhighlight %}
+print "hahaha"
+```
 
 
 
