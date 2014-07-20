@@ -11,8 +11,12 @@ tags:
 #第一篇博客
 > 爱众人，信少数人，不害人！
 
-{% highlight bash %}
-print "hello word"
+{% highlight python linenos %}
+
+print "hello world"
+
+print "hahaha"
+
 {% endhighlight %}
 
 
