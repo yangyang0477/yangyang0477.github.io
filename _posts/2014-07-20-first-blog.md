@@ -13,8 +13,9 @@ tags:
 
 代码测试
 
-
-    print 'hello world'
-    print 'hahhaa' 
+<pre><code>
+print 'hello world'
+print 'hahhaa' 
+</code></pre>
 
 ![My Blog](/media/files/2014/07/20/myblog.jpg)
