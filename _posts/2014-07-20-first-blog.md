@@ -11,8 +11,9 @@ tags:
 #第一篇博客
 > 爱众人，信少数人，不害人！
 
-
-    printf "hello word"
+{% highlight bash %}
+printf "hello word"
+{% endhighlight %}
 
 
 ![My Blog](/media/files/2014/07/20/myblog.jpg)
