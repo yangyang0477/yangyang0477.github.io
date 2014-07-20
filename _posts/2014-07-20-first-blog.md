@@ -13,9 +13,8 @@ tags:
 
 代码测试
 
-<pre><code class='python'>
-print 'hello world'
-print 'hahhaa' 
-</code></pre>
+
+    print 'hello world'
+    print 'hahhaa' 
 
 ![My Blog](/media/files/2014/07/20/myblog.jpg)
