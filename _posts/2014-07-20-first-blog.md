@@ -11,10 +11,10 @@ tags:
 #第一篇博客
 > 爱众人，信少数人，不害人！
 
-{% highlight python linenos %}
+
+{% highlight ruby linenos %}
 
 print "hello world"
-
 print "hahaha"
 
 {% endhighlight %}
