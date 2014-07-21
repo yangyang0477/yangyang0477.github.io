@@ -1,7 +1,7 @@
 $("#back-top").hide();
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 1000) {
+    if ($(this).scrollTop() > 1500) {
       $('#back-top').fadeIn();
     } else {
       $('#back-top').fadeOut();
