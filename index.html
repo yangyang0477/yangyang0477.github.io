@@ -21,7 +21,7 @@ layout: default
     </span>
     {% endif %}
     <!-- 开始多说评论数目显示-->
-    <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key={{ post.guid }} data-count-type="comments"></span>
+    <a title="comment" href={{ post.url }}><i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key={{ post.guid }} data-count-type="comments"></span></a>
     <!-- 结束 -->
     </section>
     <section class="post">
@@ -43,7 +43,7 @@ layout: default
       <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
       <!-- 开始多说评论数目显示-->
-      <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key={{ post.guid }} data-count-type="comments"></span>
+      <a title="comment" href={{ post.url }}><i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key={{ post.guid }} data-count-type="comments"></span></a>
       <!-- 结束 -->
     </li>
   {% endfor %}
