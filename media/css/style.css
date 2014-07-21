@@ -10,7 +10,6 @@
  * |\.|._)._)
  * --------------------------------- */
 @import url(/media/fonts/telex-regular.css);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
 * {
   margin: 0;
   padding: 0; }
@@ -60,13 +59,13 @@ code {
   background-color: #f8f8f8;
   padding: 2px 5px;
   border: 1px dashed #e0e0e0;
-  font-family: "Ubuntu", monospace; }
+  font-family: "telexregular", monospace; }
 
 h1, h2 {
   font-size: 1.4em; }
 
 time {
-  font-family: "Ubuntu", monospace; }
+  font-family: "telexregular", monospace; }
 
 header {
   width: 680px;
