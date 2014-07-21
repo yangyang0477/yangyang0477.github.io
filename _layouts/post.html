@@ -38,7 +38,7 @@ layout: default
     {% endif %}
     </span>
   </div>
-
+  {% endif %}
   <div class="ds-thread" data-thread-key={{ page.guid }} data-title={{ page.title }} data-url={{ page.url }}></div>
   <script type="text/javascript"> 
     var duoshuoQuery = {short_name:"yangyang0477"}; 
@@ -49,5 +49,4 @@ layout: default
       ds.charset = 'UTF-8'; 
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds); })(); 
   </script>
-  {% endif %}
 </article>
