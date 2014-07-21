@@ -5,6 +5,8 @@ tags:
   - blog
   - github
   - jekyll
+
+guid:1
 ---
 
 
