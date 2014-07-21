@@ -3,7 +3,7 @@ permalink: /:year/:month/:day/:title.html
 name: "YangYang0477"
 markdown: rdiscount
 favicon: "/favicon.ico"
-author: "Orods小羊"
+author: "Orods杨阳"
 highlighter: pygments
 encoding: utf-8
 
