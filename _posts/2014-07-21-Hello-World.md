@@ -8,7 +8,7 @@ tags:
 ---
 
 
-#第一篇博客
+#第二篇博客
 > 爱众人，信少数人，不害人！  
 
 代码测试
@@ -17,5 +17,3 @@ tags:
 print 'hello world'
 print 'hahhaa'
 </code></pre>
-
-![My Blog](/media/files/2014/07/20/myblog.jpg)
