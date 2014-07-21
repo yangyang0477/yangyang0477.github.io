@@ -20,6 +20,9 @@ layout: default
       {% endfor %}
     </span>
     {% endif %}
+    <!-- 开始多说评论数目显示-->
+    <span class="ds-thread-count" data-thread-key={{ post.guid }} data-count-type="comments"></span>
+    <!-- 结束 -->
     </section>
     <section class="post">
     {{ post.content }}
@@ -39,8 +42,21 @@ layout: default
     <li class="listing-item">
       <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      <!-- 开始多说评论数目显示-->
+      <span class="ds-thread-count" data-thread-key={{ post.guid }} data-count-type="comments"></span>
+      <!-- 结束 -->
     </li>
   {% endfor %}
     <li class="listing-seperator"><a href="/archive.html">早期博客</a></li>
   </ul>
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yangyang0477"};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
 </div>
