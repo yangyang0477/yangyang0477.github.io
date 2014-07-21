@@ -1,0 +1,201 @@
+﻿<html>
+	<head>
+		<title> svg editor</title>
+		<style>
+			#toolbox{
+				float:left;
+				width:300px;
+				height:600px;
+				border:1px solid black;
+			}
+			#toolbox h2{
+				background-color:grey;
+			}
+			#toolbox form{
+				padding: 10px;
+			}
+			#canvas{
+				width:800px;
+				height:600px;
+				float:left;
+				border:1px solid blue;
+			}
+			label{
+				display: inline;
+				width: 80px;
+				text-align:left;
+			}
+		</style>
+		<script src="../media/js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id ="toolbox">
+			<h2>创建</h2>
+			<form id="create">
+				<button type="button" shape="rect">长方形</button>
+				<button type="button" shape="circle">圆</button>
+				<button type="button" shape="ellipse">椭圆</button>
+				<button type="button" shape="line">直线</button>	
+			</form>
+			<h2>形状</h2>
+			<form id="shape">
+				还没有创建图形
+			</form>
+			<h2>变换</h2>
+			<form id="transform" disabled="disabled">
+				<p>
+					<label>填充</label>
+					<input id="fill" type="color" value="#ffffff"/>
+				</p>
+				<p>
+					<label>描边</label>
+					<input id="stroke" type="color" value="#ffffff"/>
+				</p>
+				<p>
+					<label style="display:inline-block">x轴平移</label>
+					<input id="translateX" type="range" min="-400" max="400" value="0"/>
+					<label style="display:inline-block">y轴平移</label>
+					<input id="translateY" type="range" min="-400" max="400" value="0"/>
+					<label style="display:inline-block">旋转</label>
+					<input id="rotate" type="range" min="-180" max="180" value="0"/>
+					<label style="display:inline-block">缩放</label>
+					<input id="scale" type="range" min="-1" max="2" step="0.1" value="0"/>
+				</p>
+			</form>
+		</div>	
+		<div id ="canvas"></div>
+	</body>
+	<script>
+	    console.log("sdfsfs");
+		var nameSpace = "http://www.w3.org/2000/svg"
+		var shapeDefaultInfo={
+			rect: {x:10,y:10,width:200,height:100,rx:0,ry:0},
+			circle: {cx:200,cy:200,r:50},
+			ellipse: {cx:200,cy:200,rx:80,ry:30},
+			line: {x1:10,y1:10,x2:100,y2:100}
+		}
+		var defaultAttrs={
+			fill:'#ffffff',
+			stroke:'#000000'
+		}
+		var createForm = $("#create");
+		var shapeForm = $("#shape");
+		var transForm = $("#transform");
+		var svg = createSVG();
+		var selected = null;
+		$(svg).click(function(e){
+			//如果点击的DOM tagname是rect,circle,line,ellipse中的一个，那么选中它
+			if(e.target.tagName.toLowerCase() in shapeDefaultInfo){
+				select(e.target);
+			}
+		})
+		createForm.click(function(e){
+			//console.log(e.target)
+			//如果点击button 创建对应的图形
+			if(e.target.tagName.toLowerCase() == 'button'){
+				createShape(e.target.attributes.shape.value);
+			}
+		})
+		shapeForm.change(function(e){
+			if(e.target.tagName.toLowerCase() == 'input'){
+				var handle = e.target;
+				//console.log(handle.name,handle.value);
+				selected.setAttribute(handle.name,handle.value);
+			}
+		})
+		transForm.change(function(e){
+			if(e.target.tagName.toLowerCase() == 'input'){
+				if(selected){
+					var t ={};
+					t.tx = translateX.value;
+					t.ty = translateY.value;
+					t.rotate = rotate.value;
+					t.scale = scale.value;
+					selected.setAttribute('fill',fill.value);
+					selected.setAttribute('stroke',stroke.value);
+					selected.setAttribute('transform',encodeTransform(t));
+				}
+			}
+		})
+		//创建svg画布函数
+		function createSVG(){
+			var svg = document.createElementNS(nameSpace,'svg');
+			svg.setAttribute('width','100%');
+			svg.setAttribute('height','100%');
+			$('#canvas').append(svg);
+			return svg;
+		}
+		//创建图形函数
+		function createShape(name){
+			var shape = document.createElementNS(nameSpace,name);
+			select(shape);
+			svg.appendChild(shape);
+		}
+		function select(shape){
+			//获取初始属性
+			var attrs = shapeDefaultInfo[shape.tagName]
+			var attr,name,value;
+			shapeForm.html("");
+			for (var key in attrs){
+				if(attrs.hasOwnProperty(key)){
+					name = key;
+					value = shape.getAttribute(name) || attrs[key];
+					shape.setAttribute(name,value);
+					//创建shapeForm中的操作内容
+					createShapeHandle(shape,name,value);
+				}
+			}
+			for (var name in defaultAttrs){
+				if(defaultAttrs.hasOwnProperty(name)){
+					value = shape.getAttribute(name) || defaultAttrs[name];
+					shape.setAttribute(name,value);
+				}
+			}
+			selected = shape;
+			//更新操作内容
+			updateShapeHandle();
+		}
+		//生成shapForm中的操作内容函数
+		function createShapeHandle(shape,name,value){
+			var label = $('<label style="display:inline-block">' + name + '</label>');
+			var handle = $('<input/>');
+			handle.attr({
+			'name':name,
+			'type':'range',
+			'value':value,
+			'min':0,
+			'max':800
+			})
+			shapeForm.append(label);
+			shapeForm.append(handle);
+			
+		}
+		
+		function updateShapeHandle(){
+			fill.value = selected.getAttribute('fill');
+			stroke.value = selected.getAttribute('stroke');
+			//transform 属性比较特殊 连着书写的所以需要特殊处理
+			var t = decodeTransform(selected.getAttribute('transform'))
+			translateX.value = t ?t.tx : 0;
+			translateY.value = t ?t.ty : 0;
+			rotate.value = t? t.rotate : 0;
+			scale.value = t? t.scale:1;
+		}
+		//特殊处理transform属性字符串的方法
+		//translate(10,20) rotate(20) scale(2)
+		function decodeTransform(transString){
+			var match = /translate\((\d+),(\d+)\)\srotate\((\d+)\)\sscale\((\d+)\)/.exec(transString);
+			return match?{tx:+match[1],ty:+match[2],rotate:+match[3],scale:+match[4]}:null;
+		}
+		
+		function encodeTransform(t){
+			var s_tr = 'translate('+t.tx+','+t.ty+')';
+			var s_rotate = 'rotate('+t.rotate+')';
+			var s_scale = 'scale('+t.scale+')';
+			return [s_tr,s_rotate,s_scale].join(' ');
+		}
+	</script>
+
+
+
+</html>
