@@ -43,7 +43,7 @@ layout: default
       <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
       <!-- 开始多说评论数目显示-->
-      <span class="ds-thread-count" data-thread-key={{ post.guid }} data-count-type="comments"></span>
+      (<span class="ds-thread-count" data-thread-key={{ post.guid }} data-count-type="comments"></span>)
       <!-- 结束 -->
     </li>
   {% endfor %}
