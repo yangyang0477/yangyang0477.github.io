@@ -17,10 +17,13 @@ navigations:
   - title: About
     class: fa fa-user
     href: /about.html
+  - title: Code
+    class: fa fa-file
+    href: /code.html
   - title: BlogLink
     class: fa fa-link
-    href: /links.html
+    href: /links.html		
   - title: Subscribe
     class: fa fa-rss
-    href: /atom.xml
+    href: /atom.xml		
 
