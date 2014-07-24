@@ -31,6 +31,7 @@ hr {
   border: none;
   border-top: 1px dashed #d0d0d0;
   border-bottom: 1px dashed #f9f9f9; }
+  
 
 .center {
   text-align: center; }
@@ -106,6 +107,7 @@ header {
   line-height: 2em; }
   #content .main-listing {
     margin-bottom: 2em; }
+
 
 ul.listing {
   margin-top: 1em; }
@@ -219,3 +221,38 @@ footer {
     padding-right: 5px; }
   #like-wrapper .like-button:hover {
     color: #dd1144; }
+	
+	
+#back-top {
+  position: fixed;
+  bottom: 30px;
+  margin-left: 1100px;
+}
+#back-top a {
+  width: 54px;
+  height: 54px;
+  display: block;
+  background: #ddd url(../img/bg_up_arrow.png) no-repeat center center;
+  background-color: #aaa;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover {
+  background-color: #777;
+}	
+
+#menuIndex {
+  position: fixed;
+  margin-left: 750px;
+}
+#menuIndex .h3{
+  font-size:0.8em;
+  margin-left:10px;
+}	
+#menuIndex a:hover {
+  color: #dd1144;
+}	
