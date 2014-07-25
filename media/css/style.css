@@ -21,7 +21,7 @@ body {
   background-color: #f9f9f9; }
 
 ol, ul {
-  list-style-position: inside; }
+  list-style-position: outside; }
 
 li {
   padding: .2em 0; }
@@ -252,6 +252,9 @@ footer {
 #menuIndex .h3{
   font-size:0.8em;
   margin-left:10px;
+}
+#menuIndex .h2{
+  font-size:1.2em;
 }	
 #menuIndex a:hover {
   color: #dd1144;

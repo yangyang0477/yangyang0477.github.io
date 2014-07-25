@@ -17,7 +17,7 @@ $(document).ready(function(){
                     h3item.name = $(item).text();
                     h3item.id = 'menuIndex'+index;
 					if(h2index-1<0){
-						alert('sb别在使用h2标签之前使用h3标签');
+						alert('2货别在使用h2标签之前使用h3标签');
 					}
                     if(!h3[h2index-1]){
                         h3[h2index-1] = [];
