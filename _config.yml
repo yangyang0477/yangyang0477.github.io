@@ -4,6 +4,7 @@ name: "YangYang0477"
 markdown: kramdown
 favicon: "/favicon.ico"
 author: "Orods杨阳"
+atom-baseurl: "http://yangtou.me"
 highlighter: pygments
 encoding: utf-8
 
