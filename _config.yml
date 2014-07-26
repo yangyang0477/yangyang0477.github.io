@@ -1,6 +1,6 @@
 
 permalink: /:year/:month/:day/:title.html
-name: "YangYang0477"
+name: "YangYang0477's Blog"
 markdown: kramdown
 favicon: "/favicon.ico"
 author: "Orods杨阳"
