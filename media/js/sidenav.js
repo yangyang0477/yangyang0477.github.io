@@ -4,7 +4,6 @@ $(document).ready(function(){
             var h2 = [];
             var h3 = [];
             var h2index = 0;
-
             $.each($('h2,h3'),function(index,item){
                 if(item.tagName.toLowerCase() == 'h2'){
                     var h2item = {};
@@ -51,7 +50,7 @@ $(document).ready(function(){
             return tmpl;
         }
 
-        function genIndex(){
+        function getIndex(){
             var tmpl = genTmpl();
             var indexCon = '<div id="menuIndex" class="sidenav"></div>';
 
@@ -60,17 +59,14 @@ $(document).ready(function(){
             $('#menuIndex')
                 .append($(tmpl))
                 .delegate('a','click',function(e){
-                    e.preventDefault();
-
                     var selector = $(this).attr('data-id') ? '#'+$(this).attr('data-id') : 'h1'
                     var scrollNum = $(selector).offset().top;
-					console.log(scrollNum);
-
-                    $('body, html').animate({ scrollTop: scrollNum-30 }, 750, 'swing');
+					//console.log(scrollNum);
+                    $('body, html').animate({ scrollTop: scrollNum - 15 }, 500, 'linear');
                 });
         }
         if($('h2').length > 2){
-            genIndex();
+            getIndex();
             $("#menuIndex").hide();
 			$(window).scroll(function () {
 				if ($(this).scrollTop() > 50) {

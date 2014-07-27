@@ -3,9 +3,9 @@ title: 开始博客之旅
 layout: post
 guid: 1
 tags:
-  - blog
-  - github
-  - jekyll
+  - Blog
+  - Github
+  - Jekyll
 ---
 
 

@@ -21,7 +21,7 @@ body {
   background-color: #f9f9f9; }
 
 ol, ul {
-  list-style-position: outside; }
+  list-style-position: inside; }
 
 li {
   padding: .2em 0; }
@@ -249,6 +249,9 @@ footer {
   position: fixed;
   margin-left: 750px;
 }
+#menuIndex ol, ul {
+  list-style-position: outside; }
+
 #menuIndex .h3{
   font-size:0.8em;
   margin-left:10px;
