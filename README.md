@@ -6,6 +6,6 @@ todo:
 - 添加多说评论 Done!
 - backtop Done!
 - 添加页内导航 Done!
-- 百度分享，百度统计 todo~
+- 百度分享，百度统计 Done!
 
 
