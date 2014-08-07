@@ -65,7 +65,7 @@ $(document).ready(function(){
                     $('body, html').animate({ scrollTop: scrollNum - 15 }, 500, 'linear');
                 });
         }
-        if($('h2').length > 2){
+        if($('h2').length >= 2){
             getIndex();
             $("#menuIndex").hide();
 			$(window).scroll(function () {
