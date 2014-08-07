@@ -5,6 +5,9 @@ layout: default
   <section class="title">
     <h1>{{ page.title }} </h1>
   </section>
+  <section class="license">
+    <h4>本文地址:<a href ={{ site.url }}{{page.url }}>{{ site.url }}{{page.url }}</a></h4>
+  </section>
   <section class="meta">
   <span class="time">
     <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
