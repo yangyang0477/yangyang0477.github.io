@@ -14,7 +14,7 @@ tags:
 
 ![MOOC来了](/media/files/2014/07/22/1.jpg)
 
-##MOOC
+## MOOC
 
 说起MOOC(Massive Open Online Courses)，第一反应是机器学习大牛吴恩达(Andrew Ng)和其创办的[Coursera](https://www.coursera.org/)网站。由于对Ng的崇拜，开始关注开放课程在国内的发展。
 
@@ -27,7 +27,7 @@ tags:
 
 所以感觉相比于腾讯，欢聚时代，网易，收录了主流的三大课程提供商[Coursera](https://www.coursera.org/)、[Udacity](http://www.udacity.com)、[edX](http://www.edxonline.org/)的所有课程的果壳[mooc学院](http://mooc.guokr.com/)也许更加的适合渴望回到课堂的童鞋们！
 
-##慕课网
+## 慕课网
 又一个无聊的时候，随手点进了[慕课网](http://www.imooc.com/)，说实话不是因为它的广告，是因为它的名字和域名实在是山寨的有点过分……我才抱着看戏的心态进去的。
 
 当央视CCTV13《新闻调查》之“慕课来了”节目播出后，MOOC这个词在微博上大火了一把，而[慕课网](http://www.imooc.com/)也很不要脸的宣传了一把……
@@ -36,6 +36,6 @@ tags:
 
 虽然看似很山寨，推广做法也很猥琐，但是网站内容还是吸引了我。由于在实习的单位正好参与一个数据可视化的项目，用到一些Web前端的技术，这个网站所提供的一些学习内容正是我目前很感兴趣的。内容挺多，要慢慢选一些有趣的消化了。
 
-##Step In SVG
+## Step In SVG
 前面说了那么一堆废话，︿(￣︶￣)︽(￣︶￣)︿。其实我是想说我目前在跟着[Step in SVG](http://www.imooc.com/learn/143)这个课程，昨天做了个练习[svgEditor](/demo/svgEditor.html)，已放到博客上。我会努力把这个课程跟下去的~希望讲师童鞋不要太监了！
 
