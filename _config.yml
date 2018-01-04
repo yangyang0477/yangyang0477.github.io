@@ -5,7 +5,7 @@ markdown: kramdown
 favicon: "/favicon.ico"
 author: "Orods杨阳"
 url: "http://yangyang0477.github.io"
-highlighter: pygments
+highlighter: rouge
 encoding: utf-8
 
 navigations:
